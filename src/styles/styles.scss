@@ -1,0 +1,50 @@
+@import "./_mixins";
+
+* {
+  font-family: "Lora", serif !important;
+}
+
+body {
+  background-color: #efefef;
+}
+
+.home {
+  padding: 50px;
+  h1 {
+    @include text(30px, 600, 30px);
+    text-align: center;
+  }
+  .product-card {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff !important;
+    // min-height: 100%;
+    margin-bottom: 20px;
+    h4 {
+      @include text(24px, 500, 10px);
+    }
+    h5 {
+      @include text(16px, 400, 10px);
+      svg {
+        height: 20px;
+        width: 20px;
+        margin-left: 10px;
+        &.true path {
+          fill: green;
+        }
+        &.false path {
+          fill: red;
+        }
+      }
+    }
+    button {
+      @include text(16px, 400, 0, #fff);
+      background-color: #000;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 25px;
+      margin-top: 20px;
+    }
+  }
+}
